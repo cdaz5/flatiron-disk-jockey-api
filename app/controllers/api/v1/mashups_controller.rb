@@ -1,4 +1,5 @@
 class Api::V1::MashupsController < ApplicationController
+  before_action :authorize_user!, only: [:index, :create]
 
   def index
     @mashups = Mashup.all
