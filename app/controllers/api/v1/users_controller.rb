@@ -4,7 +4,9 @@ class Api::V1::UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.valid?
       @user.save
-      render json: @user
+      created_jwt = issue_token({id: @user.id})
+
+      render json: {username: @user.username, jwt: created_jwt}
     else
       render json: {errors: @user.errors.full_messages}
     end
