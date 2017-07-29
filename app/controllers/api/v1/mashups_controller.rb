@@ -11,7 +11,6 @@ class Api::V1::MashupsController < ApplicationController
     @mashup = Mashup.new
     @mashup.title = mashup_params['title']
     @mashup.user = current_user
-
     mashup_params['videos'].each do |video|
       @mashup.videos << Video.find_or_create_by(video)
     end
@@ -26,7 +25,7 @@ class Api::V1::MashupsController < ApplicationController
   private
 
   def mashup_params
-    params.require(:mashup).permit(:title, :videos => [:id, :youtube_id, :title, :thumbnail])
+    params.permit(:title, :videos => [:youtube_id, :title, :thumbnail])
   end
 
 end
