@@ -6,6 +6,7 @@ Rails.application.routes.draw do
       post '/login', to: 'auth#create'
       get '/me', to: 'auth#show'
       post '/signup', to: 'users#create'
+      get '/user_mashups', to: 'users#user_mashups'
     end
   end
 end

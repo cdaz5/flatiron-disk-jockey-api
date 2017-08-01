@@ -12,6 +12,11 @@ class Api::V1::UsersController < ApplicationController
     end
   end
 
+  def user_mashups
+    @mashups = current_user.mashups
+    render json: @mashups
+  end 
+
   private
 
   def user_params
