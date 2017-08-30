@@ -2,7 +2,7 @@ class Api::V1::MashupsController < ApplicationController
   before_action :authorize_user!, only: [:create]
 
   def index
-    @mashups = Mashup.all
+    @mashups = Mashup.all.order(created_at: :DESC)
 
     render json: @mashups
   end
