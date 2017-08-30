@@ -27,9 +27,10 @@ Please visit: http://flatiron-disk-jockey.herokuapp.com/ to view a live version 
 
 ## Authors
 
-Pat Pasquale Rocchio
-Chris Dascoli
-Pradeep Dayaram
+* Pat Pasquale Rocchio
+* Chris Dascoli
+* Pradeep Dayaram
+* Sammy Goldsmith
 
 ## Acknowledgments
 
